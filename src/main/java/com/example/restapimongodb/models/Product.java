@@ -12,6 +12,7 @@ public class Product
     private String title;
     private String description;
     private String image;
+    private Integer category;
     private Integer inventory;
     private boolean bestseller;
     private boolean hero;
@@ -20,12 +21,13 @@ public class Product
     public Product() {
     }
 
-    public Product(String id, String title, String description, String image, Integer inventory, boolean bestseller, boolean hero, Double price) {
+    public Product(String id, String title, String description, String image, Integer inventory, boolean bestseller, boolean hero, Double price, Integer category) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.image = image;
         this.inventory = inventory;
+        this.category = category;
         this.bestseller = bestseller;
         this.hero = hero;
         this.price = price;
@@ -95,6 +97,14 @@ public class Product
         this.price = price;
     }
 
+    public Integer getCategory() {
+        return category;
+    }
+
+    public void setCategory(Integer category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -102,6 +112,7 @@ public class Product
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
+                ", category=" + category +
                 ", inventory=" + inventory +
                 ", bestseller=" + bestseller +
                 ", hero=" + hero +
